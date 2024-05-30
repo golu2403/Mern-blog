@@ -6,7 +6,7 @@ import Signin from "./Pages/Signin";
 import Signup from "./Pages/Signup";
 import Dashboard from "./Pages/Dashboard";
 import Header from "./components/Header";
-
+import Projects from "./Pages/Projects"
 
 export default function App() {
   return (
@@ -18,6 +18,7 @@ export default function App() {
       <Route path='/about' element={<About />} />
       <Route path='/sign-in' element={<Signin />} />
       <Route path='/dashboard' element={<Dashboard />} />
+      <Route path='/projects' element={<Projects />} />
     </Routes>
     </BrowserRouter>
   )
