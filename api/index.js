@@ -2,9 +2,11 @@ import express from "express"
 import mongoose from "mongoose"
 import dotenv from "dotenv";
 import userRoutes from "./router/user.router.js"
-
+import authRoutes from "./router/user.auth.js";
 
 dotenv.config();
+
+
 
 mongoose.connect(process.env.MONGO_URL).then(()=>{
     console.log('database is connected succesfully');
@@ -14,10 +16,12 @@ mongoose.connect(process.env.MONGO_URL).then(()=>{
     console.log(err)
 })
 
-const app=express()
+const app=express();
+app.use(express.json());
 
 
-app.use("/user/api",userRoutes);
+app.use("/api/user",userRoutes);
+app.use("/api/auth",authRoutes);
 
 
 
