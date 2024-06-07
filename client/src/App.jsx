@@ -7,6 +7,7 @@ import Signup from "./Pages/Signup";
 import Dashboard from "./Pages/Dashboard";
 import Header from "./components/Header";
 import Projects from "./Pages/Projects"
+import FooterCom from "./components/Footer";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <Route path='/dashboard' element={<Dashboard />} />
       <Route path='/projects' element={<Projects />} />
     </Routes>
+    <FooterCom />
     </BrowserRouter>
   )
 }
